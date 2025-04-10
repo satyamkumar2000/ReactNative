@@ -1,1 +1,1 @@
-![App Screenshot] (./assets/initial_screenshot.png)
+![App Screenshot](./assets/initial_screenshot.png)
