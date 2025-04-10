@@ -1,3 +1,3 @@
 <p align="center">
-  <img src="./my-app/assets/initial_screenshot.png" alt="App Screenshot" style="max-width: 100%; height: auto;" />
+  <img src="./assets/initial_screenshot.png" alt="App Screenshot" width="2560" />
 </p>
