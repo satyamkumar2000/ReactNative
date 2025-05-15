@@ -1,50 +1,62 @@
-import React, { useState } from 'react';
-import { Text, View, TextInput, FlatList, TouchableOpacity, Alert } from 'react-native';
-import { StatusBar } from 'expo-status-bar';
-import styles from './styles';
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { Provider as PaperProvider } from 'react-native-paper';
+
+import GalleryScreen from './GalleryScreen';
+import PictureViewingScreen from './PictureViewingScreen';
+import ProfileScreen from './ProfileScreen';
+
+const Tab = createBottomTabNavigator();
+const Stack = createNativeStackNavigator();
+
+function Gallery() {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen
+        name="GalleryHome"
+        component={GalleryScreen}
+        options={{ title: 'Gallery' }}
+      />
+      <Stack.Screen
+        name="Viewer"
+        component={PictureViewingScreen}
+        options={{ title: 'View Picture' }}
+      />
+    </Stack.Navigator>
+  );
+}
 
 export default function App() {
-  const [item, setItem] = useState('');
-  const [wishlist, setWishlist] = useState([]);
-
-  const handleAddItem = () => {
-    if (item.trim() === '') {
-      Alert.alert('Error', 'Please enter an item.');
-      return;
-    }
-    setWishlist(prevList => [...prevList, { key: Math.random().toString(), name: item }]);
-    setItem('');
-  };
-
-  const handleDeleteItem = (key) => {
-    setWishlist(prevList => prevList.filter(item => item.key !== key));
-  };
-
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>My Wishlist</Text>
-      <TextInput
-        style={styles.input}
-        placeholder=""
-        value={item}
-        onChangeText={setItem}
-      />
-      <TouchableOpacity style={styles.addButton} onPress={handleAddItem}>
-      <Text style={styles.addButtonText}>Add to Wishlist</Text>
-      </TouchableOpacity>
-      <FlatList
-        style={styles.list}
-        data={wishlist}
-        renderItem={({ item }) => (
-          <View style={styles.listItemContainer}>
-            <Text style={styles.listItem}>• {item.name}</Text>
-            <TouchableOpacity onPress={() => handleDeleteItem(item.key)} style={styles.removeButton}>
-              <Text style={styles.removeButtonText}>Remove</Text>
-            </TouchableOpacity>
-          </View>
-        )}
-      />
-      <StatusBar style="auto" />
-    </View>
+    <PaperProvider>
+      <NavigationContainer>
+        <Tab.Navigator
+          screenOptions={{
+            tabBarIcon: () => null, 
+            tabBarLabelStyle: {
+              fontSize: 16,        
+              textAlign: 'center',  
+              paddingBottom: 8,   
+            },
+            tabBarStyle: {
+              height: 60,    
+            },
+          }}
+        >
+          <Tab.Screen
+            name="Gallery"
+            component={Gallery}
+            options={{ headerShown: false }}
+          />
+          <Tab.Screen
+            name="Profile"
+            component={ProfileScreen}
+            options={{ headerShown: true }}
+          />
+        </Tab.Navigator>
+      </NavigationContainer>
+    </PaperProvider>
   );
 }
