@@ -1,58 +1,38 @@
-# Wishlist App
+# React Native Gallery App
 
-A simple, stylish React Native app that allows users to maintain a **wishlist**.
+This mobile app was built as part of a React Native assignment focused on advanced UI and functionality. It allows users to:
 
----
+- Browse a gallery of images
+- View images in full-screen mode
+- Edit and save their profile
 
-## Design and Purpose
+## 🖼️ Screenshots
 
-This app helps users keep track of their wishlist in a quick, minimalistic format. 
+### 1. Gallery Screen
 
-**Target audience**: Mobile users who want a simple and clean wishlist app without extra clutter.
+![Gallery Screen](./assetse/gallery.png)
 
----
+### 2. Picture Viewing Screen
 
-## Basic Use
+![Picture Viewer](./assets/fullscreen.png)
 
-1. Open the app.
-2. Type your item into the input field.
-3. Tap **"Add to Wishlist"** to save it.
-4. View your wishlist below.
-5. Tap **"Remove"** to delete an item from your list.
+### 3. Profile Screen
 
----
+![Profile Screen](./assets/profile.png)
 
-## Features
+### 3. Saved profile
 
-- Add items to wishlist
-- Remove items with a button
-- Input validation to prevent blank entries
-- Stylish black & white themed UI
+![Saved Profile](./assets/saved.png)
 
----
+### 3. Validation
 
-## Components Used
-
-- `View`
-- `Text`
-- `TextInput`
-- `TouchableOpacity`
-- `FlatList`
-- `Alert`
-- `StatusBar`
+![Validation](./assets/validation.png)
 
 ---
 
-![Initial Screen](./my-app/assets/initial_screen.png)
-**Figure 1**: Empty List.
+## Libraries Used
 
-![Error](./my-app/assets/error.png)
-**Figure 2**: Error message when the input field is empty, and you click add to wishlist.
-
-![Full List](./my-app/assets/fulllist.png)
-**Figure 3**: Full list with several items and remove buttons.
-
-![After deleting](./my-app/assets/delete.png)
-**Figure 3**: Full list after deleting a item.
-
----
+- React Native
+- React Navigation (Stack + Bottom Tabs)
+- React Native Paper (for UI components)
+- AsyncStorage (local persistent storage)
