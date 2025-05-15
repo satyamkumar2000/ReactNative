@@ -6,27 +6,27 @@ This mobile app was built as part of a React Native assignment focused on advanc
 - View images in full-screen mode
 - Edit and save their profile
 
-## 🖼️ Screenshots
+## Screenshots
 
 ### 1. Gallery Screen
 
-![Gallery Screen](./assetse/gallery.png)
+![Gallery Screen](./my-app//assetse/gallery.png)
 
 ### 2. Picture Viewing Screen
 
-![Picture Viewer](./assets/fullscreen.png)
+![Picture Viewer](./my-app//assets/fullscreen.png)
 
 ### 3. Profile Screen
 
-![Profile Screen](./assets/profile.png)
+![Profile Screen](./my-app//assets/profile.png)
 
 ### 3. Saved profile
 
-![Saved Profile](./assets/saved.png)
+![Saved Profile](./my-app//assets/saved.png)
 
 ### 3. Validation
 
-![Validation](./assets/validation.png)
+![Validation](./my-app//assets/validation.png)
 
 ---
 
