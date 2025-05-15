@@ -10,23 +10,23 @@ This mobile app was built as part of a React Native assignment focused on advanc
 
 ### 1. Gallery Screen
 
-![Gallery Screen](./my-app//assetse/gallery.png)
+![Gallery Screen](./my-app/assets/gallery.png)
 
 ### 2. Picture Viewing Screen
 
-![Picture Viewer](./my-app//assets/fullscreen.png)
+![Picture Viewer](./my-app/assets/fullscreen.png)
 
 ### 3. Profile Screen
 
-![Profile Screen](./my-app//assets/profile.png)
+![Profile Screen](./my-app/assets/profile.png)
 
 ### 3. Saved profile
 
-![Saved Profile](./my-app//assets/saved.png)
+![Saved Profile](./my-app/assets/saved.png)
 
 ### 3. Validation
 
-![Validation](./my-app//assets/validation.png)
+![Validation](./my-app/assets/validation.png)
 
 ---
 
